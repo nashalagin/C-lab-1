@@ -1,4 +1,4 @@
-#include "Task3.h"
+#include "task3.h"
 
 int main()
 {
