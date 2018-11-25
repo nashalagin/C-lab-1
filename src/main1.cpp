@@ -7,32 +7,23 @@ int main()
 	char gender;
 	float height=0, weight=0;
 	int z=0;
-	/*do
-	{*/
-		cout << "Введите ваш пол (m - мужской, w - женский) ";
-		cin >> gender;
-
-	/*} while (gender != 'm' && gender != 'w');
-	do
-	{*/
-		cout << "Введите свой рост ";
-		cin >> height;
-		cout << "Введите свой вес ";
-		cin >> weight;
-	/*	if (height < 110) cout << "Введен не корректный рост!Повторите попытку!" << endl;
-		if (weight < 1) cout << "Введен не корректный вес!Повторите попытку!" << endl;*/
-	/*} while (height <= 110 || weight <= 1);*/
-		if ((gender != 'm' && gender != 'w')||( height <= 0 && height > 250) ||( weight < 0 && weight > 250))
+	printf("Введите ваш пол (m - мужской, w - женский) ");//cout << "Введите ваш пол (m - мужской, w - женский) ";
+	scanf("%c", &gender);								//cin >> gender;
+	printf("Введите свой рост ");						//cout << "Введите свой рост ";
+	scanf("%f", &height);								// cin >> height;
+	printf("Введите свой вес ");						//cout << "Введите свой вес ";
+	scanf("%f", &weight);								//cin >> weight;
+		if ((gender != 'm' && gender != 'w')||( height <= 110 && height > 250) ||( weight < 0 && weight > 250))
 		{
-			cout << "Введены некорректные данные";
+			printf( "Введены некорректные данные");
 			return 1;
 		}
 	z = getRecommendation(gender, height, weight);
 	if (z == -1)
-		cout << "Вес недостаточен.";
+		printf( "Вес недостаточен.");
 	if (z == 1)
-		cout << "Вес избыточен.";
+		printf("Вес избыточен.");
 	if (z == 0)
-		cout << "Вес идеален.";
+		printf("Вес идеален.");
 	return  0;
 }
