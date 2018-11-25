@@ -21,6 +21,5 @@ int main()
 	//sprintf(buf, "%f%c", angle,type);
 	buf = convert(buf, angle, type);
 	printf("%s", buf);
-	getch();
 	return 0;
 }

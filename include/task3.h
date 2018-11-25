@@ -1,5 +1,4 @@
 #pragma once
-#include <conio.h>
 #include <iostream>
 #include <stdio.h>
 char * convert(char buf[], double angle, char type);

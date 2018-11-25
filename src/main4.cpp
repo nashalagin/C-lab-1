@@ -6,6 +6,5 @@ int main()
 	int feet, inches;
 	cin >> feet >> inches;
 	cout << feet << "'" << inches << "=" << convert(feet, inches) << "см.";
-	getch();
 	return 0;
 }
