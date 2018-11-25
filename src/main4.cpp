@@ -1,10 +1,12 @@
 #include "task4.h"
-
+#include <stdio.h>
 int main()
 {
-	setlocale(LC_ALL, "");
-	int feet, inches;
-	cin >> feet >> inches;
-	cout << feet << "'" << inches << "=" << convert(feet, inches) << "см.";
+	int feet, inches,sm;
+	scanf("%d'%d", &feet, &inches);
+	if (feet < 0 && inches < 0) 
+		return 1;
+	sm = convert(feet, inches);
+	printf("%d'%d = %d CM.", feet, inches, sm);
 	return 0;
 }

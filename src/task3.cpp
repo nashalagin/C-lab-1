@@ -1,12 +1,4 @@
-//double convert( double angle, char type)
-//{
-//	/*double Temp;*/
-//	if (type == 'R') return angle * (180 / 3.14159);
-//
-//	if (type == 'D') return angle * (3.14159 / 180);
-//
-//
-//}
+
 #include <stdio.h>
 char * convert(char buf[], double angle, char type)
 {
@@ -21,5 +13,5 @@ char * convert(char buf[], double angle, char type)
 		type = 'R';
 	}
 	sprintf(buf, "%f%c", angle, type);
-		return buf;
+	return buf;
 }

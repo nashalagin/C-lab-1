@@ -1,12 +1,11 @@
 #include "task2.h"
+#include <stdio.h>
 
 int main()
 {
-	int hour, min;
-	cin >> hour;
-	cin >> min;
-	cout << "\r" << hour << ":" << min << endl;
-	cout << greet(hour, min);
+	int hour=0, min=0;
+	scanf("%d:%d", &hour, &min);
+	printf("%s", greet(hour, min));
 	return 0;
 
 }

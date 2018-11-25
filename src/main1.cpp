@@ -15,7 +15,7 @@ int main()
 	scanf("%f", &weight);								//cin >> weight;
 		if ((gender != 'm' && gender != 'w')||( height <= 110 && height > 250) ||( weight < 0 && weight > 250))
 		{
-			printf( "¬ведены некорректные данные");
+			printf( "¬ведены некорректные данные!");
 			return 1;
 		}
 	z = getRecommendation(gender, height, weight);
