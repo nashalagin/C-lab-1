@@ -3,7 +3,7 @@
 
 int main()
 {
-	int feet, inches,sm;
+	int feet = 0, inches = 0,sm = 0 ;
 	scanf("%d'%d", &feet, &inches);
 	if (feet < 0 && inches < 0) 
 		return 1;
