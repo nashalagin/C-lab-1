@@ -8,12 +8,12 @@ int main()
 	char gender;
 	float height = 0, weight = 0;
 	printf("¬ведите ваш пол (m - мужской, w - женский) ");
-	scanf("%c", &gender);
+	int result = scanf("%c", &gender);
 	printf("¬ведите свой рост ");
-	scanf("%f", &height);
+	result += scanf("%f", &height);
 	printf("¬ведите свой вес ");
-	scanf("%f", &weight);
-	if ( (gender != 'm' && gender != 'w') || ((height <= 110 || height > 250) || (weight < 1 || weight > 250) ))
+	result += scanf("%f", &weight);
+	if ((result !=3)|| (gender != 'm' && gender != 'w') || ((height <= 110 || height > 250) || (weight < 1 || weight > 250) ))
 	{
 		printf("¬ведены некорректные данные!");
 		return 1;
