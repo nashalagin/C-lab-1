@@ -1,28 +1,26 @@
 #include "task1.h"
 #include <stdio.h>
-#include <iostream>
 
 int main()
 {
-	setlocale(LC_ALL, "rus");
 	char gender;
 	float height = 0, weight = 0;
-	printf("Введите ваш пол (m - мужской, w - женский) ");
+	printf("Enter your gender (m - man, w - woman) ");
 	int result = scanf("%c", &gender);
-	printf("Введите свой рост ");
+	printf("Enter your height ");
 	result += scanf("%f", &height);
-	printf("Введите свой вес ");
+	printf("Enter your weight ");
 	result += scanf("%f", &weight);
-	if ((result !=3)|| (gender != 'm' && gender != 'w') || ((height <= 110 || height > 250) || (weight < 1 || weight > 250) ))
+	if ((result != 3) || (gender != 'm' && gender != 'w') || ((height < 10 || height > 250) || (weight < 1 || weight > 250) ))
 	{
-		printf("Введены некорректные данные!");
+		printf("Uncorrect data!");
 		return 1;
 	}
 	if (getRecommendation(gender, height, weight) == -1)
-		printf("Вес недостаточен.");
+		printf("You need to get fat.");
 	if (getRecommendation(gender, height, weight) == 1)
-		printf("Вес избыточен.");
+		printf("You need to lose weight.");
 	if (getRecommendation(gender, height, weight) == 0)
-		printf("Вес идеален.");
+		printf("Your weight is perfect!");
 	return  0;
 }
