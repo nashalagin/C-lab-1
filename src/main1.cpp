@@ -1,30 +1,28 @@
 #include "task1.h"
-#include <iostream>
 #include <stdio.h>
+#include <iostream>
 
 int main()
 {
-	setlocale(LC_ALL, "");
+	setlocale(LC_ALL, "rus");
 	char gender;
-	float height=0, weight=0;
-	int z=0;
-	printf("Введите ваш пол (m - мужской, w - женский) ");//cout << "Введите ваш пол (m - мужской, w - женский) ";
-	scanf("%c", &gender);								//cin >> gender;
-	printf("Введите свой рост ");						//cout << "Введите свой рост ";
-	scanf("%f", &height);								// cin >> height;
-	printf("Введите свой вес ");						//cout << "Введите свой вес ";
-	scanf("%f", &weight);								//cin >> weight;
-		if ((gender != 'm' && gender != 'w')||( height <= 110 && height > 250) ||( weight < 0 && weight > 250))
-		{
-			printf( "Введены некорректные данные!");
-			return 1;
-		}
-	z = getRecommendation(gender, height, weight);
-	if (z == -1)
-		printf( "Вес недостаточен.");
-	if (z == 1)
+	float height = 0, weight = 0;
+	printf("Введите ваш пол (m - мужской, w - женский) ");
+	scanf("%c", &gender);
+	printf("Введите свой рост ");
+	scanf("%f", &height);
+	printf("Введите свой вес ");
+	scanf("%f", &weight);
+	if ( (gender != 'm' && gender != 'w') || ((height <= 110 || height > 250) || (weight < 1 || weight > 250) ))
+	{
+		printf("Введены некорректные данные!");
+		return 1;
+	}
+	if (getRecommendation(gender, height, weight) == -1)
+		printf("Вес недостаточен.");
+	if (getRecommendation(gender, height, weight) == 1)
 		printf("Вес избыточен.");
-	if (z == 0)
+	if (getRecommendation(gender, height, weight) == 0)
 		printf("Вес идеален.");
 	return  0;
 }

@@ -3,9 +3,10 @@
 
 int main()
 {
-	int feet = 0, inches = 0,sm = 0 ;
+	int feet, inches, sm;
+	printf("Enter feet and inches in format feet'inches\n");
 	scanf("%d'%d", &feet, &inches);
-	if (feet < 0 && inches < 0) 
+	if (feet < 0 && inches < 0)
 		return 1;
 	sm = convert(feet, inches);
 	printf("%d'%d = %d CM.", feet, inches, sm);

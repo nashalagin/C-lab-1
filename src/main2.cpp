@@ -3,9 +3,8 @@
 
 int main()
 {
-	int hour=0, min=0, sec=0;
-	scanf("%d:%d:%d", &hour, &min, &sec);
+	int hour = 0, min = 0;
+	int result = scanf("%d:%d", &hour, &min);
 	printf("%s", greet(hour, min));
 	return 0;
-
 }
